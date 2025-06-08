@@ -18,7 +18,7 @@ public class ArmeMagique implements Sort{
         m_scanner = new Scanner(System.in);
     }
     @Override
-    public void lancer(ArrayList<Entite> entites, Donjon donjon)
+    public void lancer(ArrayList<Personnage> entites, Donjon donjon)
     {
         listPerso(entites);
         int index = -1;
@@ -32,7 +32,7 @@ public class ArmeMagique implements Sort{
             System.out.println("Entrée invalide.");
             return;
         }
-        Entite cible = entites.get(index);
+        Personnage cible = entites.get(index);
 
         if (cible.getType() != TypeEntite.JOUEUR) {
             System.out.println("Ce sort ne peut être lancé que sur un personnage.");
@@ -73,7 +73,7 @@ public class ArmeMagique implements Sort{
         armeCible.setM_bonus(armeCible.getBonus()+1);
 
     }
-    public void listPerso(ArrayList<Entite> persos)
+    public void listPerso(ArrayList<Personnage> persos)
     {
         System.out.println("Choisissez une cible parmis :");
         for (int i=0;i<persos.size();i++)

@@ -60,6 +60,7 @@ public class AffichageJeu {
         System.out.println("  - se déplacer (dep <case>)");
         System.out.println("  - ramasser (ram)");
         System.out.println("  - s'équiper (equ <index équipement>)");
+        System.out.println("  - lancer un sort (lan)");
         System.out.print("> ");
     }
     public static String nextLineTourPersonnage(){
@@ -98,6 +99,8 @@ public class AffichageJeu {
                 catch (Exception e){
                     System.out.println("Il faut un nombre après equ.");
                 }
+            } else if (line.startsWith("lan")) {
+                valide = true;
             } else {
                 System.out.println("Commande invalide.");
             }
@@ -108,6 +111,20 @@ public class AffichageJeu {
     public static void afficherRP(String texte){
         System.out.println("RP : " + texte);
     }
+    
+    public static String proposerSort()
+    {
+        System.out.println("========================");
+        System.out.println("\t- Guérison: le personnage détenteur du sort peut choisir un personnage (y compris lui-même) et lance 1d10 pour connaître le nombre de points de vie que le personnage visé regagnera. Le personnage soigné ne peut pas dépasser le nombre de points de vie qu'il avait à sa création.");
+        System.out.println("\t- Boogie Woogie : le personnage détenteur du sort peut choisir deux personnages (y compris lui-même), de deux monstres ou d'un personnage (y compris lui-même) et d'un monstre et échanger leur position dans le donjon.");
+        System.out.println("\t- Arme magique : le personnage détenteur du pouvoir peut choisir une arme détenue par un personnage (mais pas forcément équipée) à améliorer. L'arme gagne alors un bonus de 1 lors des jets d'attaque et de 1 lors des jets de dégâts (les bonus peuvent se cumuler). Les personnages de classe Clerc peuvent lancer le sort Guérison. Les magiciens peuvent lancer n'importe quel sort.");
+        System.out.println("========================");
+        System.out.print("Choisissez un sort parmi ces trois là:");
+        return m_scanner.nextLine().trim().toLowerCase();
+    }
+    
+    public static void mauvaiseClasse() { System.out.println("Il faut être magicien ou clerc pour pouvoir utiliser des sorts !"); }
+    
     public static void afficherErreur(){
         System.out.println("Il y a une erreur dans la commande !");
     }

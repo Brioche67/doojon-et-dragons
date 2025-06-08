@@ -1,7 +1,7 @@
 package donjonDragon.entite.sort;
 
 import donjonDragon.De;
-import donjonDragon.entite.Entite;
+import donjonDragon.entite.*;
 import donjonDragon.plateau.Donjon;
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ public class Guerison implements Sort{
     }
 
     @Override
-    public void lancer(ArrayList<Entite> entites, Donjon donjon)
+    public void lancer(ArrayList<Personnage> entites, Donjon donjon)
     {
         listPerso(entites);
         Entite cible = entites.get(Integer.parseInt(m_scanner.nextLine())-1);
@@ -30,7 +30,7 @@ public class Guerison implements Sort{
             System.out.println(cible.getNom()+" a été soigné ! Ses pv sont à "+cible.getPv()+"/"+cible.getPvMax());
         }
     }
-    public void listPerso(ArrayList<Entite> persos)
+    public void listPerso(ArrayList<Personnage> persos)
     {
         System.out.println("Choisissez une cible parmis :");
         int i = 0;

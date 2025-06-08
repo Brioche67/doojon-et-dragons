@@ -1,6 +1,6 @@
 package donjonDragon.entite.sort;
 
-import donjonDragon.entite.Entite;
+import donjonDragon.entite.*;
 import donjonDragon.plateau.*;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class BoogieWoogie implements Sort{
     }
 
     @Override
-    public void lancer(ArrayList<Entite> entites, Donjon donjon) {
+    public void lancer(ArrayList<Personnage> entites, Donjon donjon) {
         boolean valide = false;
         int[] cible1, cible2;
         while (!valide)

@@ -5,6 +5,7 @@ import donjonDragon.equipement.*;
 import donjonDragon.plateau.*;
 import donjonDragon.entite.race.*;
 import donjonDragon.entite.classe.*;
+import donjonDragon.entite.sort.*; 
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -396,6 +397,29 @@ public class Jeu {
                 else{
                     AffichageJeu.afficherErreur();
                 }
+            } else if (input.startsWith("lan")) {
+                Classe classeJoueur = joueur.getClasse();
+                if (classeJoueur.getTypeClasse() != TypeClasse.AUTRE)
+                {
+                    String sort = AffichageJeu.proposerSort();
+                    if (sort.equals("guérison")) {
+                        Sort guerison = new Guerison();
+                        guerison.lancer(m_joueurs,donjon);
+                        actions--; 
+                    }
+                    else if (sort.equals("woogie woogie")) {
+                        Sort boogieWoogie = new BoogieWoogie();
+                        boogieWoogie.lancer(m_joueurs,donjon);
+                        actions--; 
+                    }
+                    else if (sort.equals("arme magique")) {
+                        Sort armeMagique = new ArmeMagique();
+                        armeMagique.lancer(m_joueurs,donjon);
+                        actions--; 
+                    }
+                    else { System.out.println("Commande invalide."); }
+                }
+                else { AffichageJeu.mauvaiseClasse(); }
             } else {
                 System.out.println("Commande invalide.");
             }
