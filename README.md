@@ -11,7 +11,8 @@ C'est un jeu de rôle de Medieval Fantasy où les joueurs incarnent des personna
 
 # Technologies utilisées
 Le jeu est codé en Java sur Intellij. L'UML a été réalisé via plantUML.
-##Guide d'installation
+
+# Guide d'installation
 Ouvrir le projet avec un environnement Java (11 de préférence).
 Lancé le main et utiliser le clavier pour jouer.
 
