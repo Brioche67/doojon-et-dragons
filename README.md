@@ -1,19 +1,21 @@
 # DOOnjon&Dragon
 
 ## Images
-<img width="939" height="895" alt="image" src="https://github.com/user-attachments/assets/e5bb5815-4e36-4a68-8f5e-a7ff0b527cc2" />
-<img width="702" height="1104" alt="image" src="https://github.com/user-attachments/assets/766d861a-8add-4637-99bc-c98b654b893a" />
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e5bb5815-4e36-4a68-8f5e-a7ff0b527cc2" alt="image1" width="45%">
+  <img src="https://github.com/user-attachments/assets/766d861a-8add-4637-99bc-c98b654b893a" alt="image2" width="45%">
+</div>
 
-##Description
+## Description
 C'est un jeu de rôle de Medieval Fantasy où les joueurs incarnent des personnages affrontant des monstres dans plusieurs donjons successifs. Le jeu est inspiré de Donjon & Dragons, et se joue via la console. Le projet est fini, les derniers ajoûts ont été ajouté a la hâte et donc leur implémentation n'est pas propre.
 
-##Technologies utilisées
+## Technologies utilisées
 Le jeu est codé en Java sur Intellij. L'UML a été réalisé via plantUML.
 ##Guide d'installation
 Ouvrir le projet avec un environnement Java (11 de préférence).
 Lancé le main et utiliser le clavier pour jouer.
 
-##Fonctionnalités
+## Fonctionnalités
 ### Les personnages
 
 Chaque joueur à l'exception du Maître du Jeu incarne un personnage.
